@@ -24,7 +24,7 @@ export default function BrandStory() {
                         <span className="text-accent text-sm font-bold uppercase tracking-widest block mb-4">Our Heritage</span>
                         <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">Crafting Memories Since 1998</h2>
                         <p className="text-gray-600 mb-6 leading-relaxed">
-                            Metro Gold & Diamonds began with a simple vision: to make luxury accessible without compromising on quality. From a humble beginning in the heart of the Gold Souk, we have grown into a trusted name across the Emirates.
+                            Metro Gold & Diamonds began with a simple vision: to make luxury accessible without compromising on quality. From a humble beginning in the heart of the Gold Souk, we have grown into a trusted name across the Kerala.
                         </p>
                         <p className="text-gray-600 mb-6 leading-relaxed">
                             Our journey is defined by our commitment to our customers. We believe that jewelry is not just ornamentation, but a celebration of life's precious moments. That's why every piece in our showroom is handpicked for its beauty and purity.
