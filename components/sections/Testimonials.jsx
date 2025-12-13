@@ -1,8 +1,7 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const testimonials = [
     {
@@ -36,6 +35,16 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+    const [sliderKey, setSliderKey] = useState(0);
+
+    // Force slider to recalculate on mount (fixes mobile width issues)
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setSliderKey(1);
+        }, 100);
+        return () => clearTimeout(timer);
+    }, []);
+
     const settings = {
         dots: true,
         infinite: true,
@@ -47,19 +56,35 @@ export default function Testimonials() {
         centerMode: true,
         centerPadding: '0px',
         focusOnSelect: true,
+        adaptiveHeight: true,
         responsive: [
             {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 2,
+                    slidesToScroll: 1,
                     centerMode: false,
+                    adaptiveHeight: true,
                 }
             },
             {
-                breakpoint: 640,
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
+                    slidesToScroll: 1,
                     centerMode: false,
+                    dots: true,
+                    adaptiveHeight: true,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: false,
+                    dots: true,
+                    adaptiveHeight: true,
                 }
             }
         ]
@@ -79,7 +104,7 @@ export default function Testimonials() {
                 </div>
 
                 <div className="px-1 md:px-2">
-                    <Slider {...settings} className="testimonial-slider">
+                    <Slider key={sliderKey} {...settings} className="testimonial-slider">
                         {testimonials.map((t) => (
                             <div key={t.id} className="px-2">
                                 <div className="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-gray-100 min-h-[320px] md:min-h-[350px] flex flex-col hover:shadow-2xl transition-all duration-300 slick-center-scale">
