@@ -7,26 +7,26 @@ import { FiMessageCircle } from "react-icons/fi";
 const products = [
     {
         id: 1,
-        name: "Royal Polki Necklace",
+        name: "Royal Necklace with Stones",
         image: "/images/jewellery3.jpeg",
         category: "Gold",
     },
     {
         id: 2,
-        name: "Solitaire Platinum Ring",
-        image: "/images/jewellery5.jpeg",
+        name: "Solitaire Diamond Ring",
+        image: "/images/ring2.jpeg",
         category: "Diamond",
     },
     {
         id: 3,
-        name: "Templework Choker",
+        name: "Elegant Gold Bangles",
         image: "/images/jewellery9.jpeg",
         category: "Gold",
     },
     {
         id: 4,
-        name: "Eternity Diamond Band",
-        image: "/images/jewellery6.jpeg",
+        name: " Diamond Ring with Stone",
+        image: "/images/ring5.jpeg",
         category: "Diamond",
     },
 ];
