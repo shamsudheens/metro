@@ -49,15 +49,24 @@ export default function Testimonials() {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 4000,
-        centerMode: true,
-        centerPadding: '0px',
-        focusOnSelect: true,
+        centerMode: false,
         adaptiveHeight: true,
         responsive: [
+            {
+                breakpoint: 9999,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    centerPadding: '0px',
+                    focusOnSelect: true,
+                    adaptiveHeight: true,
+                }
+            },
             {
                 breakpoint: 1024,
                 settings: {
