@@ -66,32 +66,32 @@ export default function Testimonials() {
     };
 
     return (
-        <section className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+        <section className="py-12 md:py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
             {/* Decorative elements */}
             <div className="absolute top-0 left-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
             <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
 
-            <div className="container mx-auto px-6 relative z-10">
-                <div className="text-center mb-16">
-                    <span className="text-accent text-sm font-bold uppercase tracking-widest">Testimonials</span>
-                    <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mt-3 mb-4">What Our Customers Say</h2>
-                    <p className="text-gray-600 max-w-2xl mx-auto">Real experiences from our valued customers</p>
+            <div className="container mx-auto px-4 md:px-6 relative z-10">
+                <div className="text-center mb-8 md:mb-16">
+                    <span className="text-accent text-xs md:text-sm font-bold uppercase tracking-widest">Testimonials</span>
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-primary mt-2 md:mt-3 mb-2 md:mb-4">What Our Customers Say</h2>
+                    <p className="text-sm md:text-base text-gray-600 max-w-2xl mx-auto px-4">Real experiences from our valued customers</p>
                 </div>
 
-                <div className="px-2">
+                <div className="px-1 md:px-2">
                     <Slider {...settings} className="testimonial-slider">
                         {testimonials.map((t) => (
                             <div key={t.id} className="px-2">
-                                <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 min-h-[350px] flex flex-col hover:shadow-2xl transition-all duration-300 slick-center-scale">
+                                <div className="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-gray-100 min-h-[320px] md:min-h-[350px] flex flex-col hover:shadow-2xl transition-all duration-300 slick-center-scale">
                                     {/* User Avatar */}
-                                    <div className="flex items-center gap-4 mb-6">
+                                    <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6">
                                         <img
                                             src={t.avatar}
                                             alt={t.name}
-                                            className="w-16 h-16 rounded-full border-4 border-accent shadow-md"
+                                            className="w-12 h-12 md:w-16 md:h-16 rounded-full border-4 border-accent shadow-md"
                                         />
                                         <div>
-                                            <h4 className="font-serif font-bold text-lg text-primary">{t.name}</h4>
+                                            <h4 className="font-serif font-bold text-base md:text-lg text-primary">{t.name}</h4>
                                             <span className="text-xs text-accent uppercase tracking-widest font-bold">{t.location}</span>
                                         </div>
                                     </div>

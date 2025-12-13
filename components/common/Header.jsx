@@ -32,20 +32,20 @@ export default function Header() {
     return (
         <header
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled || isProductsPage
-                    ? "bg-primary/60 backdrop-blur-md shadow-lg py-3 border-b border-white/10"
-                    : "bg-transparent py-5"
+                ? "bg-primary/60 backdrop-blur-md shadow-lg py-3 border-b border-white/10"
+                : "bg-transparent py-5"
                 }`}
         >
             <div className="container mx-auto px-6 flex items-center justify-between">
                 {/* Logo */}
                 <Link
                     href="/"
-                    className="flex items-center h-14 md:h-20 w-auto"
+                    className="flex items-center h-12 md:h-20 w-auto"
                 >
                     <img
                         src="/images/logo.png"
                         alt="Metro Gold Logo"
-                        className="h-full w-36 object-cover bg-transparent max-w-[200px] md:max-w-[280px]"
+                        className="h-full w-20 md:w-28 object-cover bg-transparent"
                         draggable={false}
                     />
                 </Link>
